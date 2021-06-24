@@ -43,6 +43,7 @@ public class VerticaSQLDialect extends GenericSQLDialect {
             "COMMENT",
             "CORRELATION",
             "ENCODED",
+            "FLEX",
             "ILIKE",
             "ILIKEB",
             "INTERVALYM",
