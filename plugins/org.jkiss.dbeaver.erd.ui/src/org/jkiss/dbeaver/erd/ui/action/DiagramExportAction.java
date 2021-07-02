@@ -32,6 +32,8 @@ import java.io.FileOutputStream;
 import java.io.OutputStreamWriter;
 import org.jkiss.dbeaver.utils.GeneralUtils;
 import org.jkiss.dbeaver.erd.ui.model.DiagramLoader;
+import org.jkiss.dbeaver.ui.UIIcon;
+import org.jkiss.dbeaver.ui.DBeaverIcons;
 
 /**
  * Action to toggle diagram persistence
@@ -44,8 +46,8 @@ public class DiagramExportAction extends Action {
     private Shell shell;
 
     public DiagramExportAction(ERDEditorEmbedded editor, Shell shell) {
-        super("Save diagram", ERDUIActivator.getImageDescriptor("icons/arrangeall.png"));
-        setDescription("Save diagram into a ERD file");
+        super("Export diagram", DBeaverIcons.getImageDescriptor(UIIcon.EXPORT));
+        setDescription("Export diagram into a ERD file");
         setToolTipText(getDescription());
         this.editor = editor;
         this.shell = shell;
