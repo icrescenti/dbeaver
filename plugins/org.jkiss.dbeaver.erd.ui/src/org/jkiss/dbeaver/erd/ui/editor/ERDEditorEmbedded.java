@@ -47,6 +47,7 @@ import org.jkiss.dbeaver.ui.editors.IDatabaseEditor;
 import org.jkiss.dbeaver.ui.editors.IDatabaseEditorInput;
 import org.jkiss.dbeaver.ui.editors.entity.IEntityStructureEditor;
 import org.jkiss.dbeaver.erd.ui.action.DiagramExportAction;
+import org.jkiss.dbeaver.erd.ui.action.DiagramImportAction;
 import org.jkiss.dbeaver.utils.RuntimeUtils;
 import org.jkiss.utils.CommonUtils;
 import org.jkiss.utils.xml.XMLUtils;
@@ -96,8 +97,12 @@ public class ERDEditorEmbedded extends ERDEditorPart implements IDatabaseEditor,
     protected void fillDefaultEditorContributions(IContributionManager toolBarManager) {
         super.fillDefaultEditorContributions(toolBarManager);
 
+        toolBarManager.add(new Separator("Import/Export"));
+
         DiagramExportAction saveDiagram = new DiagramExportAction(this, parent.getShell());
         toolBarManager.add(saveDiagram);
+        DiagramImportAction loadDiagram = new DiagramImportAction(this,  parent.getShell(), this.getVirtualObject());
+        toolBarManager.add(loadDiagram);
 
         toolBarManager.add(ActionUtils.makeActionContribution(new DiagramTogglePersistAction(this), true));
 
