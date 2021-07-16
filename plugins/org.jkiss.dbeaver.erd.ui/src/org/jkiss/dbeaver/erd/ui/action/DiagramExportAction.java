@@ -21,7 +21,6 @@ package org.jkiss.dbeaver.erd.ui.action;
 
 import org.eclipse.jface.action.Action;
 import org.jkiss.dbeaver.erd.ui.editor.ERDEditorEmbedded;
-import org.jkiss.dbeaver.erd.ui.internal.ERDUIActivator;
 
 import org.jkiss.dbeaver.model.runtime.VoidProgressMonitor;
 import org.eclipse.swt.widgets.FileDialog;
